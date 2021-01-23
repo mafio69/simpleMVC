@@ -1,0 +1,6 @@
+actor: AcceptanceTester
+modules:
+  enabled:
+    - PhpBrowser:
+        url: {http://0.0.0.0:8200}
+    - \Helper\Acceptanc
