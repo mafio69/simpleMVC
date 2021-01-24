@@ -1,0 +1,16 @@
+#!/usr/bin/env php
+<?php
+// application.php
+define('BASE_DIR',dirname(__DIR__));
+require BASE_DIR.'/vendor/autoload.php';
+
+use App\Config\ReedOnEnv;
+use Symfony\Component\Console\Application;
+$reedDev = new ReedOnEnv(BASE_DIR.'/.env');
+$reedDev->load();
+$application = new Application();
+
+// ... register commands
+$application->add(new App\Command\CreateTableProducts());
+$application->add(new App\Command\FillTableProducts());
+$application->run();

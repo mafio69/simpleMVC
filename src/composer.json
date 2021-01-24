@@ -10,6 +10,10 @@
         }
     ],
     "require": {
+        "php": "^7.4",
+        "ext-ctype": "*",
+        "ext-curl": "*",
+        "ext-iconv": "*",
         "ext-SimpleXML": "*",
         "ext-PDO": "*",
         "phroute/phroute": "*",
@@ -19,7 +23,8 @@
         "ext-dom": "*",
         "ext-mysqli": "*",
         "ext-xsl": "*",
-        "ext-libxml": "*"
+        "ext-libxml": "*",
+        "symfony/console": "^5.2"
     },
     "require-dev": {
         "symfony/var-dumper": "^5.2",
@@ -30,7 +35,8 @@
     },
     "autoload": {
         "psr-4": {
-            "App\\": "./App"
+            "App\\": "./App",
+            "bin\\": "./bin"
         }
     }
 }

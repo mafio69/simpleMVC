@@ -1,9 +1,10 @@
 <?php
+
 namespace App\Web\Model;
 
 use SimpleXMLElement;
 
-class prepareProduct
+class prepareXMl
 {
     /**
      * @var SimpleXMLElement|string
@@ -16,7 +17,7 @@ class prepareProduct
         $this->data = $this->data->xpath('item');
     }
 
-    public function loadData():array
+    public function loadData(): array
     {
         $data = [];
 
@@ -25,34 +26,6 @@ class prepareProduct
         }
 
         return $data;
-    }
-
-    public function flatData():array
-    {
-        $data = $this->loadData();
-        $returnedData = [];
-
-        foreach ($data as $key => $value)
-        {
-            $fieldName = (key($value[$key]));
-            [$fieldName =>$value[$key][$fieldName][1]];
-
-        }
-
-        return  $returnedData ;
-    }
-
-    /**
-     * @param object $data
-     *
-     * @return array|false
-     */
-    public function getKey(object $data)
-    {
-        if (isset($data)) {
-            return get_object_vars($this->data[0]);
-        }
-        return false;
     }
 
     /**
@@ -69,18 +42,33 @@ class prepareProduct
 
         foreach ($propertyArray as $key => $value) {
             $type = $this->getType($value);
-            if ($type == 'object') {
-                $objectVars = get_object_vars($value);
 
+            if ($type == 'addTable') {
+                $objectVars = get_object_vars($value);
                 foreach ($objectVars as $keyTwo => $valueTwo) {
                     $value = $valueTwo;
-                    $type = 'array';
+                    $type = $key;
                 }
+                continue;
             }
+
             $result[] = [$key => [$type, $value]];
         }
 
-       return  $result;
+        return $result;
+    }
+
+    /**
+     * @param object $data
+     *
+     * @return array|false
+     */
+    public function getKey(object $data)
+    {
+        if (isset($data)) {
+            return get_object_vars($this->data[0]);
+        }
+        return false;
     }
 
     private function getType($value): string
@@ -89,10 +77,13 @@ class prepareProduct
 
         switch ($type) {
             case 'object':
-                $type = 'object';
+                $type = $value->count() === 0 ? 'VARCHAR(125)' : 'addTable';
                 break;
             default:
-                $type = preg_match('/^(\d+[.]?)/', $value) ? 'int' : 'string';
+                $type = preg_match('/^(\d+[.]?)/', $value) ? 'int' : 'VARCHAR(125)';
+                if ($type === 'int') {
+                    $type = strpos($value, ".") ? 'FLOAT' : "INT";
+                }
                 break;
         }
 

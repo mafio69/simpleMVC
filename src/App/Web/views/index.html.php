@@ -5,6 +5,9 @@
     <title>Title</title>
 </head>
 <body>
-<?php dump($data); ?>
+<?php
+/** @var array $data */
+dump($data);
+?>
 </body>
 </html>

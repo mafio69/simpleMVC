@@ -4,7 +4,7 @@ require BASE_DIR . "/App/Web/Routes/routes.php";
 use App\Config\ReedOnEnv;
 use FastRoute\Dispatcher;
 
-$reedDev = new ReedOnEnv(BASE_DIR.'/.env');
+$reedDev = new ReedOnEnv(BASE_DIR . '/.env');
 $reedDev->load();
 
 $httpMethod = $_SERVER['REQUEST_METHOD'];

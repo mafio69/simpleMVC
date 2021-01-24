@@ -1,12 +1,13 @@
 <?php
+
 namespace App\Config;
 
 use Exception;
 use Monolog\Handler\FirePHPHandler;
 use Monolog\Handler\StreamHandler;
 use Monolog\Logger;
-use \PDO;
-use \PDOException;
+use PDO;
+use PDOException;
 use PDOStatement;
 
 class Model
@@ -25,7 +26,7 @@ class Model
     public function __construct()
     {
         $this->logger = new Logger('logger');
-        $this->logger->pushHandler(new StreamHandler(BASE_DIR . '/Logs/DB/dbLog.log', Logger::DEBUG));
+        $this->logger->pushHandler(new StreamHandler(dirname(__DIR__) . '/Logs/DB/dbLog.log', Logger::DEBUG));
         $this->logger->pushHandler(new FirePHPHandler());
 
         try {
@@ -37,6 +38,17 @@ class Model
         }
     }
 
+    public function prepareException(Exception $e, string $method, string $sql, string $title): void
+    {
+        /** @var Logger $logger */
+        $this->logger->critical("{$title} | {$method} | {$sql}: {$e -> getMessage()}");
+        if (getenv('APP_ENV') === 'dev') {
+            echo $e->getMessage();
+        }
+
+        exit('<br> <h3 style="color: brown">Fail</h3>');
+    }
+
     public function rowCount(): int
     {
         return $this->stmt->rowCount();
@@ -45,29 +57,6 @@ class Model
     public function lastId(): string
     {
         return $this->dbh->lastInsertId();
-    }
-
-    public function bind(array $data): void
-    {
-        foreach ($data as $k => $dat) {
-            switch (true) {
-
-                case is_bool($dat):
-                    $type = PDO::PARAM_BOOL;
-                    break;
-                case is_int($dat):
-                    $type = PDO::PARAM_INT;
-                    break;
-                case is_null($dat):
-                    $type = PDO::PARAM_NULL;
-                    break;
-                default:
-                    $type = PDO::PARAM_STR;
-                    break;
-            }
-
-            $this->stmt->bindValue(':' . $k, $dat, $type);
-        }
     }
 
     public function getAll(string $tableName, string $order = null, $limit = null, bool $debug = false): array
@@ -140,12 +129,12 @@ class Model
 
     /**
      * @param string $sql
-     * @param array $data
+     * @param array|bool $data
      * @param bool $debug
      *
      * @return array|bool|mixed
      */
-    public function query(string $sql, array $data, bool $debug = false)
+    public function query(string $sql, $data = false, bool $debug = false)
     {
         $this->execute($sql, $data, $debug);
 
@@ -172,30 +161,6 @@ class Model
             return $this->stmt->fetchAll(PDO::FETCH_OBJ);
         else
             return false;
-    }
-
-
-    /**
-     * @param string $sql
-     * @param false $debug
-     * @param array $data
-     * @return mixed
-     */
-    public function execute(string $sql, array $data, bool $debug): bool
-    {
-        if ($debug === true)
-            echo $sql;
-
-        $this->stmt = $this->dbh->prepare($sql);
-        $this->bind($data);
-
-        try {
-            $this->stmt->execute();
-        } catch (PDOException $e) {
-            $this->prepareException($e, __METHOD__, $sql, 'Execute Fail');
-        }
-
-        return true;
     }
 
     /**
@@ -260,14 +225,53 @@ class Model
         return $data;
     }
 
-    public function prepareException(Exception $e, string $method, string $sql, string $title): void
+
+    /**
+     * @param string $sql
+     * @param bool $debug
+     * @param array|bool $data
+     * @return bool
+     */
+    private function execute(string $sql, $data = false, bool $debug = false): bool
     {
-        /** @var Logger $logger */
-        $this->logger->critical("{$title} | {$method} | {$sql}: {$e -> getMessage()}");
-        if (getenv('APP_ENV') === 'dev') {
-            echo $e->getMessage();
+        if ($debug === true)
+            echo $sql;
+
+        $this->stmt = $this->dbh->prepare($sql);
+        if($data != false) {
+            $this->bind($data);
         }
 
-        exit('<br> <h3 style="color: brown">Fail</h3>');
+        try {
+            $this->stmt->execute();
+        } catch (PDOException $e) {
+            $this->prepareException($e, __METHOD__, $sql, 'Execute Fail');
+        }
+
+        return true;
     }
+
+    private function bind(array $data): void
+    {
+        foreach ($data as $k => $dat) {
+            switch (true) {
+
+                case is_bool($dat):
+                    $type = PDO::PARAM_BOOL;
+                    break;
+                case is_int($dat):
+                    $type = PDO::PARAM_INT;
+                    break;
+                case is_null($dat):
+                    $type = PDO::PARAM_NULL;
+                    break;
+                default:
+                    $type = PDO::PARAM_STR;
+                    break;
+            }
+
+            $this->stmt->bindValue(':' . $k, $dat, $type);
+        }
+    }
+
 }
