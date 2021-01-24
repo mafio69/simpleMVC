@@ -3,8 +3,6 @@
 namespace App\Config;
 
 use Exception;
-use Monolog\Handler\FirePHPHandler;
-use Monolog\Handler\StreamHandler;
 use Monolog\Logger;
 use PDO;
 use PDOException;
@@ -25,9 +23,7 @@ class Model
      */
     public function __construct()
     {
-        $this->logger = new Logger('logger');
-        $this->logger->pushHandler(new StreamHandler(dirname(__DIR__) . '/Logs/DB/dbLog.log', Logger::DEBUG));
-        $this->logger->pushHandler(new FirePHPHandler());
+        $this->logger = (new InjectContainer)->injectMonolog();
 
         try {
             $this->dbh = new PDO("mysql:host=" . getenv('DB_HOST') . ";port=" . getenv('DB_PORT') . ";dbname=" . getenv('DB_NAME') . "", getenv('DB_USER'), getenv('DB_PASSWORD'));

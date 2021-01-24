@@ -20,8 +20,8 @@ class generateProducts
 
     public function generateSQLTableProducts(): string
     {
-        //$path = BASE_DIR . "/Storage/products_1927a13ce63d227pl .xml";
-        $path = BASE_DIR . "/Storage/start.xml";
+        //$path = getenv('path') . "/Storage/products_1927a13ce63d227pl .xml";
+        $path = getenv('path') . "/Storage/start.xml";
         $nameSpace = "http://www.w3.org/2001/XMLSchema-instance";
         $xmlData = new prepareXMl($path, $nameSpace);
         $data = $xmlData->loadData();

@@ -1,3 +1,6 @@
 /src/composer.lock
 /rb.php
 /src/Logs/test_app.log
+/src/app/Logs/route.txt
+/src/app/Logs/app/log.log
+/src/app/Logs/DB/dbLog.log
