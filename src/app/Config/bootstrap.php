@@ -35,12 +35,13 @@ switch ($routeInfo[0]) {
 
     case Dispatcher::FOUND:
         $handler = $routeInfo[1];
-           // $response = call_user_func_array(array(new $handler[0], $handler[1]), $routeInfo[2]);
-            $handler = $routeInfo[1];
-            $vars = $routeInfo[2];
-            list($class, $method) = explode('/',$handler,2);
-            $controller = $container->build()->get($class);
-            $controller->{$method}(...array_values($vars));
+        if (method_exists($handler[0],call_user_func_array(array(new $handler[0], $handler[1]), $routeInfo[2]))) {
+            $response = call_user_func_array(array(new $handler[0], $handler[1]), $routeInfo[2]);
+        } else {
+            $logger->error( 'Caught exception in file '.__FILE__);
+            require BASE_DIR . '/app/Web/views/error/error.html';
+            exit;
+        }
         break;
     default:
         throw new \Exception('Unexpected value');
