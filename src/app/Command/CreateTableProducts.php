@@ -18,7 +18,7 @@ class CreateTableProducts extends Command
     {
         $this
             ->setDescription('Make migrations')
-            ->setHelp('This command allows you to create migrate...');
+            ->setHelp('This command allows you to creates migrations from the xml file ');
     }
 
     protected function execute(InputInterface $input, OutputInterface $output): int
