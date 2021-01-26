@@ -1,11 +1,13 @@
 <?php
-
 namespace App\Web\Model;
 
+use App\Web\Controller\Add\LastCharacters;
 use SimpleXMLElement;
 
 class prepareXMl
 {
+    use LastCharacters;
+
     /**
      * @var SimpleXMLElement|string
      */
@@ -13,28 +15,47 @@ class prepareXMl
 
     public function __construct(string $filePath, string $nameSpace)
     {
-        $this->data = (simplexml_load_file($filePath, 'SimpleXMLElement', 0, $nameSpace));
+        $this->data = new SimpleXMLElement(file_get_contents($filePath), LIBXML_NOCDATA, null
+            , $nameSpace);
         $this->data = $this->data->xpath('item');
     }
 
     public function loadData(): array
     {
         $data = [];
-
         foreach ($this->data as $key => $value) {
-            $data[$key] = $this->getOneElement();
+            $data[] = $this->getOneElementToCreate($value);
         }
 
         return $data;
     }
 
     /**
+     * @param SimpleXMLElement $data
+     *
+     * @return array
+     */
+    public function getOneElementToCreate(SimpleXMLElement $data): array
+    {
+        $propertyArray = $this->getKey($data[0]);
+
+        if (!count($propertyArray)) {
+            return [];
+        }
+
+        return $this->generateData($propertyArray);
+    }
+
+    /**
+     * @param array $propertyArray
+     *
      * @return array|false
      */
-    public function getOneElement()
+    private function generateData(array $propertyArray)
     {
-        $result = false;
-        $propertyArray = $this->getKey($this->data[0]);
+        $nameField = null;
+        $result = [];
+        $temp = [];
 
         if (is_array($propertyArray === false)) {
             return false;
@@ -43,16 +64,20 @@ class prepareXMl
         foreach ($propertyArray as $key => $value) {
             $type = $this->getType($value);
 
-            if ($type == 'addTable') {
+            if (strpos($type, '=')) {
+                $nameField = $this->getLastChar('=', $type);
                 $objectVars = get_object_vars($value);
+
                 foreach ($objectVars as $keyTwo => $valueTwo) {
-                    $value = $valueTwo;
+                    $temp[] = $valueTwo;
                     $type = $key;
+                    $value = $temp;
                 }
-                continue;
+            } else {
+                $nameField = null;
             }
 
-            $result[] = [$key => [$type, $value]];
+            $result[] = [$key => ['type' => $type, 'value' => $value, 'addFieldTable' => $nameField]];
         }
 
         return $result;
@@ -66,7 +91,7 @@ class prepareXMl
     public function getKey(object $data)
     {
         if (isset($data)) {
-            return get_object_vars($this->data[0]);
+            return get_object_vars($data[0]);
         }
         return false;
     }
@@ -77,13 +102,21 @@ class prepareXMl
 
         switch ($type) {
             case 'object':
-                $type = $value->count() === 0 ? 'VARCHAR(125)' : 'addTable';
+                if (!empty(key($value[0]))) {
+                    $keyAddTable = (key($value[0]));
+                    $type = "TEXT={$keyAddTable}";
+                } else {
+                    $type = 'VARCHAR(51)';
+                }
                 break;
             default:
-                $type = preg_match('/^(\d+[.]?)/', $value) ? 'int' : 'VARCHAR(125)';
-                if ($type === 'int') {
-                    $type = strpos($value, ".") ? 'FLOAT' : "INT";
+                $type = preg_match('/^(\d+[.]?\b)/', $value) && strlen($value) < 11 ? 'INT' : 'VARCHAR(255)';
+                if ($type === 'INT' && strpos($value, ".")) {
+                    $type = 'FLOAT';
+                } elseif (strlen($value) > 125) {
+                    $type = 'TEXT';
                 }
+
                 break;
         }
 

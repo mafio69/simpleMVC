@@ -21,6 +21,8 @@ class InjectContainer
             } else {
                 echo "Sorry, app fail";
             }
+
+            fileLog('MONOLOG: ' . date('Y-m-d H-i-s') . $e->getMessage() . ' : ' . $e->getTraceAsString());
         }
 
         $monolog->setTimezone(new DateTimeZone('Europe/Warsaw'));

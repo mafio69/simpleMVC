@@ -1,5 +1,4 @@
 <?php
-
 namespace App\Web\Model;
 
 use App\Config\Model;

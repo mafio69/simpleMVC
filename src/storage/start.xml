@@ -1,115 +1,107 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <products xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1" date="2018-11-09 11:29:38">
-    <item>
-        <prod_name>Abażur klosz 19,7 cm Koziol JOSEPHINE S antracytowy KZ-1937540</prod_name>
-        <prod_id>4242</prod_id>
-        <prod_price>212</prod_price>
-        <prod_tax_id>172.36</prod_tax_id>
-        <taxpercent>23</taxpercent>
-        <prod_oldprice/>
-        <prod_buy_price_net></prod_buy_price_net>
-        <prod_amount>0.0000</prod_amount>
-        <prod_hidden>0</prod_hidden>
-        <prod_symbol>KZ-1937540</prod_symbol>
-        <prod_weight>150</prod_weight>
-        <prd_name>Koziol</prd_name>
-        <prod_pkwiu></prod_pkwiu>
-        <prod_ean>4002942388679</prod_ean>
-        <prod_isbn></prod_isbn>
-        <prod_barcode></prod_barcode>
-        <prod_ship_days></prod_ship_days>
-        <prod_desc><![CDATA[Klosz Josephine to zmysłowe dzieło sztuki połyskujące niczym diament. Stanowi nowoczesną interpretację tradycyjnej wiszącej lampy. Połyskująca powierzchni roztacza blask w okół dodając ekskluzywnego charakteru i pozytywnej energii. Josephine to abażur, który stanowić będzie wyraźny element wystroju ze względu na blask, odważny projekt i intensywną kolorystykę. Marka Koziol stawia na indywidualizm pozwalajac na skomponowanie kolorystyki lampy samodzielnie, zgodnie z własnym uznaniem i potrzebami oferując osobno klosz i osobno zawieszenie (dostępne w pięciu kolorach).
- Zawiesznie nie wchodzi w skład zestawu, należy je zamawiać osobno.
- &nbsp;
- &nbsp;
- &nbsp;
- &nbsp;
- &nbsp;
- &nbsp;
- &nbsp;
- &nbsp;
- &nbsp;
+<item>
+    <prod_name>Akcesorium do krojenia ciasta Koziol SUSI KZ-3646536</prod_name>
+    <prod_id>2426</prod_id>
+    <prod_price>25</prod_price>
+    <prod_tax_id>20.33</prod_tax_id>
+    <taxpercent>23</taxpercent>
+    <prod_oldprice/>
+    <prod_buy_price_net></prod_buy_price_net>
+    <prod_amount>16.0000</prod_amount>
+    <prod_hidden>0</prod_hidden>
+    <prod_symbol>KZ-3646536</prod_symbol>
+    <prod_weight>0</prod_weight>
+    <prd_name>Koziol</prd_name>
+    <prod_pkwiu></prod_pkwiu>
+    <prod_ean>4002942292266</prod_ean>
+    <prod_isbn></prod_isbn>
+    <prod_barcode></prod_barcode>
+    <prod_ship_days>.</prod_ship_days>
+    <prod_desc><![CDATA[Akcesorium do porcjowania ciasta niemieckiej marki Koziol jest bardzo przydatne w kuchni podczas wielu uroczystości rodzinnych. Przy jego użyciu krojenie tortu, tarty i innych okrągłych ciast na równe kawałki staje się łatwe, proste i przyjemne.
  <br class="def">
 <br class="def">
 <span class="def">Kolekcja:</span>
- <strong class="def">Josephine</strong>
+ <strong class="def">Susi</strong>
  <br class="def">
 <br class="def">
 <span class="def">Wymiary:</span>
- <strong class="def">wysokość - 27,8 cm<br class="def">
-długość - 19,7 cm<br class="def">
-szerokość - 19,7 cm</strong>
+ <strong class="def">wysokość - 6,7 cm<br class="def">
+średnica - 7,9 cm</strong>
  <br class="def">
 <br class="def">
 <span class="def">Kolor:</span>
- <strong class="def">czarny</strong>
+ <strong class="def">czerwony, biały</strong>
  <br class="def">
 <br class="def">
 <span class="def">Materiał:</span>
- <strong class="def">tworzywo sztuczne</strong>]]></prod_desc>
-        <prod_shortdesc></prod_shortdesc>
-        <prod_info1_pl></prod_info1_pl>
-        <prod_info2_pl></prod_info2_pl>
-        <prod_info3_pl></prod_info3_pl>
-        <prod_info4_pl></prod_info4_pl>
-        <prod_info5_pl></prod_info5_pl>
-        <prod_note></prod_note>
-        <prod_seotitle_pl></prod_seotitle_pl>
-        <prod_seodesc_pl></prod_seodesc_pl>
-        <prod_keywords_pl></prod_keywords_pl>
-        <prod_sales_gain></prod_sales_gain>
-        <prod_link>http://wetro.pl/Abazur-klosz-19-7-cm-Koziol-JOSEPHINE-S-antracytowy-KZ-1937540-p4242</prod_link>
-        <prod_price_base>212</prod_price_base>
-        <prod_price_net_base>172.36</prod_price_net_base>
-        <prod_price_net>172.36</prod_price_net>
-        <cat_path><![CDATA[LAMPY &amp; MEBLE/Lampy/Abażury i klosze]]></cat_path>
-        <prod_img>
-            <img>http://wetro.pl/images/wetrosklep/10000-11000/Lampa-wiszaca-19-7-cm-Koziol-JOSEPHINE-S-antracytowa-KZ-1937540_[10509]_1200.jpg</img>
-            <img>http://wetro.pl/images/wetrosklep/10000-11000/Lampa-wiszaca-19-7-cm-Koziol-JOSEPHINE-S-antracytowa-KZ-1937540_[10510]_1200.jpg</img>
-            <img>http://wetro.pl/images/wetrosklep/10000-11000/Lampa-wiszaca-19-7-cm-Koziol-JOSEPHINE-S-antracytowa-KZ-1937540_[10511]_1200.jpg</img>
-            <img>http://wetro.pl/images/wetrosklep/10000-11000/Lampa-wiszaca-19-7-cm-Koziol-JOSEPHINE-S-antracytowa-KZ-1937540_[10512]_1200.jpg</img>
-            <img>http://wetro.pl/images/wetrosklep/10000-11000/Lampa-wiszaca-19-7-cm-Koziol-JOSEPHINE-S-antracytowa-KZ-1937540_[10513]_1200.jpg</img>
-        </prod_img>
-    </item>
-    <item>
-        <prod_name>Abażur klosz 19,7 cm Koziol JOSEPHINE S biały KZ-1937525</prod_name>
-        <prod_id>4243</prod_id>
-        <prod_price>212</prod_price>
-        <prod_tax_id>172.36</prod_tax_id>
-        <taxpercent>23</taxpercent>
-        <prod_oldprice/>
-        <prod_buy_price_net></prod_buy_price_net>
-        <prod_amount>0.0000</prod_amount>
-        <prod_hidden>0</prod_hidden>
-        <prod_symbol>KZ-1937525</prod_symbol>
-        <prod_weight>150</prod_weight>
-        <prd_name>Koziol</prd_name>
-        <prod_pkwiu></prod_pkwiu>
-        <prod_ean>4002942389720</prod_ean>
-        <prod_isbn></prod_isbn>
-        <prod_barcode></prod_barcode>
-        <prod_ship_days></prod_ship_days>
-        <prod_desc><![CDATA[Klosz Josephine to zmysłowe dzieło sztuki połyskujące niczym diament. Stanowi nowoczesną interpretację tradycyjnej wiszącej lampy. Połyskująca powierzchni roztacza blask w okół dodając ekskluzywnego charakteru i pozytywnej energii. Josephine to abażur, który stanowić będzie wyraźny element wystroju ze względu na blask, odważny projekt i intensywną kolorystykę. Marka Koziol stawia na indywidualizm pozwalajac na skomponowanie kolorystyki lampy samodzielnie, zgodnie z własnym uznaniem i potrzebami oferując osobno klosz i osobno zawieszenie (dostępne w pięciu kolorach).
- Zawiesznie nie wchodzi w skład zestawu, należy je zamawiać osobno.
- &nbsp;
- &nbsp;
- &nbsp;
- &nbsp;
- &nbsp;
- &nbsp;
- &nbsp;
- &nbsp;
- &nbsp;
+ <strong class="def">Tworzywo sztuczne</strong>
+ <br class="def">
+<br class="def">
+<span class="def">Dodatkowe informacje:</span>
+<p class="def">
+ Możliwość mycia w zmywarce: tak
+ </p>
+]]></prod_desc>
+    <prod_shortdesc></prod_shortdesc>
+    <prod_info1_pl></prod_info1_pl>
+    <prod_info2_pl></prod_info2_pl>
+    <prod_info3_pl></prod_info3_pl>
+    <prod_info4_pl></prod_info4_pl>
+    <prod_info5_pl></prod_info5_pl>
+    <prod_note></prod_note>
+    <prod_seotitle_pl></prod_seotitle_pl>
+    <prod_seodesc_pl></prod_seodesc_pl>
+    <prod_keywords_pl></prod_keywords_pl>
+    <prod_sales_gain></prod_sales_gain>
+    <prod_link>http://wetro.pl/Akcesorium-do-krojenia-ciasta-Koziol-SUSI-KZ-3646536-p2426</prod_link>
+    <info_options>
+        <option name="Kolekcja">Susi</option>
+    </info_options>
+    <prod_price_base>25</prod_price_base>
+    <prod_price_net_base>20.33</prod_price_net_base>
+    <prod_price_net>20.33</prod_price_net>
+    <cat_path><![CDATA[KUCHNIA &amp; JADALNIA/Narzędzia kuchenne/Inne narzędzie kuchenne]]></cat_path>
+    <prod_img>
+        <img>http://wetro.pl/images/wetrosklep/4000-5000/Akcesorium-do-krojenia-ciasta-KZ-3646536_[4929]_1200.jpg</img>
+        <img>http://wetro.pl/images/wetrosklep/4000-5000/Akcesorium-do-krojenia-ciasta-KZ-3646536_[4930]_1200.jpg</img>
+        <img>http://wetro.pl/images/wetrosklep/4000-5000/Akcesorium-do-krojenia-ciasta-KZ-3646536_[4931]_1200.jpg</img>
+        <img>
+            http://wetro.pl/images/wetrosklep/18000-19000/Akcesorium-do-krojenia-ciasta-Koziol-SUSI-KZ-3646536_[18400]_1200.jpg
+        </img>
+        <img>
+            http://wetro.pl/images/wetrosklep/18000-19000/Akcesorium-do-krojenia-ciasta-Koziol-SUSI-KZ-3646536_[18401]_1200.jpg
+        </img>
+    </prod_img>
+</item>
+
+<item>
+<prod_name>Łyżka wielofunkcyjna 32 cm Koziol DW CHEF biała KZ-2998525</prod_name>
+<prod_id>2514</prod_id>
+<prod_price>39</prod_price>
+<prod_tax_id>31.71</prod_tax_id>
+<taxpercent>23</taxpercent>
+<prod_oldprice/>
+<prod_buy_price_net></prod_buy_price_net>
+<prod_amount>1.0000</prod_amount>
+<prod_hidden>0</prod_hidden>
+<prod_symbol>KZ-2998525</prod_symbol>
+<prod_weight>0</prod_weight>
+<prd_name>Koziol</prd_name>
+<prod_pkwiu></prod_pkwiu>
+<prod_ean>4002942242384</prod_ean>
+<prod_isbn></prod_isbn>
+<prod_barcode></prod_barcode>
+<prod_ship_days>.</prod_ship_days>
+<prod_desc><![CDATA[Tak wiele funkcji w jednym narzędziu? Tak! Łyzka Koziol Chef jest jednocześnie łyżką do mieszania, szczypcami kuchennymi do makaronu i mięs, miarką do spagetti i szpatułką. Wszystko w jedym narzędziu. Wykonana z tworzywa odpornego na wysokie temperatury (do 220 stopni C).
  <br class="def">
 <br class="def">
 <span class="def">Kolekcja:</span>
- <strong class="def">Josephine</strong>
+ <strong class="def">Chef</strong>
  <br class="def">
 <br class="def">
 <span class="def">Wymiary:</span>
- <strong class="def">wysokość - 27,8 cm<br class="def">
-długość - 19,7 cm<br class="def">
-szerokość - 19,7 cm</strong>
+ <strong class="def">długość - 32 cm</strong>
  <br class="def">
 <br class="def">
 <span class="def">Kolor:</span>
@@ -117,31 +109,112 @@ szerokość - 19,7 cm</strong>
  <br class="def">
 <br class="def">
 <span class="def">Materiał:</span>
- <strong class="def">tworzywo sztuczne</strong>]]></prod_desc>
-        <prod_shortdesc></prod_shortdesc>
-        <prod_info1_pl></prod_info1_pl>
-        <prod_info2_pl></prod_info2_pl>
-        <prod_info3_pl></prod_info3_pl>
-        <prod_info4_pl></prod_info4_pl>
-        <prod_info5_pl></prod_info5_pl>
-        <prod_note></prod_note>
-        <prod_seotitle_pl></prod_seotitle_pl>
-        <prod_seodesc_pl></prod_seodesc_pl>
-        <prod_keywords_pl></prod_keywords_pl>
-        <prod_sales_gain></prod_sales_gain>
-        <prod_link>http://wetro.pl/Abazur-klosz-19-7-cm-Koziol-JOSEPHINE-S-bialy-KZ-1937525-p4243</prod_link>
-        <prod_price_base>212</prod_price_base>
-        <prod_price_net_base>172.36</prod_price_net_base>
-        <prod_price_net>172.36</prod_price_net>
-        <cat_path><![CDATA[LAMPY &amp; MEBLE/Lampy/Abażury i klosze]]></cat_path>
-        <prod_img>
-            <img>http://wetro.pl/images/wetrosklep/10000-11000/Lampa-wiszaca-19-7-cm-Koziol-JOSEPHINE-S-biala-KZ-1937525_[10514]_1200.jpg</img>
-            <img>http://wetro.pl/images/wetrosklep/10000-11000/Lampa-wiszaca-19-7-cm-Koziol-JOSEPHINE-S-biala-KZ-1937525_[10515]_1200.jpg</img>
-            <img>http://wetro.pl/images/wetrosklep/10000-11000/Lampa-wiszaca-19-7-cm-Koziol-JOSEPHINE-S-biala-KZ-1937525_[10516]_1200.jpg</img>
-            <img>http://wetro.pl/images/wetrosklep/10000-11000/Lampa-wiszaca-19-7-cm-Koziol-JOSEPHINE-S-biala-KZ-1937525_[10517]_1200.jpg</img>
-            <img>http://wetro.pl/images/wetrosklep/10000-11000/Lampa-wiszaca-19-7-cm-Koziol-JOSEPHINE-S-biala-KZ-1937525_[10518]_1200.jpg</img>
-        </prod_img>
-    </item>
-    <item>
-    </item>
+ <strong class="def">Tworzywo sztuczne</strong>
+ <br class="def">
+<br class="def">
+<span class="def">Dodatkowe informacje:</span>
+<p class="def">
+ Możliwość mycia w zmywarce: tak
+ </p>
+]]></prod_desc>
+<prod_shortdesc></prod_shortdesc>
+<prod_info1_pl></prod_info1_pl>
+<prod_info2_pl></prod_info2_pl>
+<prod_info3_pl></prod_info3_pl>
+<prod_info4_pl></prod_info4_pl>
+<prod_info5_pl></prod_info5_pl>
+<prod_note></prod_note>
+<prod_seotitle_pl></prod_seotitle_pl>
+<prod_seodesc_pl></prod_seodesc_pl>
+<prod_keywords_pl></prod_keywords_pl>
+<prod_sales_gain></prod_sales_gain>
+<prod_link>http://wetro.pl/Lyzka-wielofunkcyjna-32-cm-Koziol-DW-CHEF-biala-KZ-2998525-p2514</prod_link>
+<prod_price_base>39</prod_price_base>
+<prod_price_net_base>31.71</prod_price_net_base>
+<prod_price_net>31.71</prod_price_net>
+<cat_path><![CDATA[KUCHNIA &amp; JADALNIA/Narzędzia kuchenne/Szpatułki i łyżki kuchenne]]></cat_path>
+<prod_img>
+    <img>http://wetro.pl/images/wetrosklep/5000-6000/Lyzka-wielofunkcyjna-biala-Chef-KZ-2998525_[5115]_1200.jpg</img>
+    <img>http://wetro.pl/images/wetrosklep/5000-6000/Lyzka-wielofunkcyjna-biala-Chef-KZ-2998525_[5116]_1200.jpg</img>
+    <img>http://wetro.pl/images/wetrosklep/5000-6000/Lyzka-wielofunkcyjna-biala-Chef-KZ-2998525_[5117]_1200.jpg</img>
+</prod_img>
+</item>
+<item>
+<prod_name>Łyżka z nadrukiem do serwowania Tapas Ladelle niebieska LD-61328</prod_name>
+<prod_id>3652</prod_id>
+<prod_price>43</prod_price>
+<prod_tax_id>34.96</prod_tax_id>
+<taxpercent>23</taxpercent>
+<prod_oldprice/>
+<prod_buy_price_net></prod_buy_price_net>
+<prod_amount>6.0000</prod_amount>
+<prod_hidden>0</prod_hidden>
+<prod_symbol>LD-61328</prod_symbol>
+<prod_weight>150</prod_weight>
+<prd_name>Ladelle</prd_name>
+<prod_pkwiu></prod_pkwiu>
+<prod_ean>9314689811873</prod_ean>
+<prod_isbn></prod_isbn>
+<prod_barcode></prod_barcode>
+<prod_ship_days>.</prod_ship_days>
+<prod_desc><![CDATA[Produkty z nadrukiem z kolekcji Tapas zostały zaprojektowane tak, aby pomagać łączyć ludzi z kulturą. Morskie printy wprowadzają w błogi klimat śródziemnomorski. Kolekcja została stworzona z 100% naturalnej terakoty. Produkty są wykonywane ręcznie, dlatego każdy egzemplarz jest wyjątkowy. Wśród serii znalazło się również kilka akcesorii całkowicie naturalnych, wykonanych z drewna akacji, charakteryzujących się giętkością i elastycznością, dzięki czemu trudno ulega uszkodzeniom i doskonale sprawdza się w codziennym użytkowaniu.
+ Masz problem z brudzeniem podłogi, blatu, stołu, kuchenki i ubrania podczas gotowania? Jeżeli tak, to już z tym koniec. Podstawka pod łyżkę to doskonałe rozwiązanie i zarazem kapitalny gadżet. Prosty, a zarazem praktyczny przedmiot, który umożliwi zadbanie o czystość (obrusu, cerat, podkładek), eliminacje tłustych, ciężko usuwalnych plam i redukcję czasu po oddawaniu się kulinarnej zabawie. Wystarczy podłożyć podstawkę pod łyżkę już nad garczkiem i odstawić razem na blat, a kuchnia i kucharz będą czyste. Podstawka ma dziurkę, dzięki czemu łyżkę można wygodnie wygodnie odkładać i podnosić z podstawki, a gdy nie będzie potrzebna można ją zawiesić na haczyku.
+
+ <br class="def">
+<br class="def">
+<span class="def">Kolekcja:</span>
+ <strong class="def">Tapas</strong>
+ <br class="def">
+<br class="def">
+<span class="def">Wymiary:</span>
+ <strong class="def">wysokość - 2,7 cm<br class="def">
+długość - 11,7 cm<br class="def">
+szerokość - 21 cm</strong>
+ <br class="def">
+<br class="def">
+<span class="def">Kolor:</span>
+ <strong class="def">biały</strong>
+ <br class="def">
+<br class="def">
+<span class="def">Materiał:</span>
+ <strong class="def">terakota</strong>]]></prod_desc>
+<prod_shortdesc></prod_shortdesc>
+<prod_info1_pl></prod_info1_pl>
+<prod_info2_pl></prod_info2_pl>
+<prod_info3_pl></prod_info3_pl>
+<prod_info4_pl></prod_info4_pl>
+<prod_info5_pl></prod_info5_pl>
+<prod_note></prod_note>
+<prod_seotitle_pl></prod_seotitle_pl>
+<prod_seodesc_pl></prod_seodesc_pl>
+<prod_keywords_pl></prod_keywords_pl>
+<prod_sales_gain></prod_sales_gain>
+<prod_link>http://wetro.pl/Lyzka-z-nadrukiem-do-serwowania-Tapas-Ladelle-niebieska-LD-61328-p3652</prod_link>
+<options>
+    <options>
+        <option name="Kolekcja">Tapas</option>
+    </options>
+</options>
+<prod_price_base>43</prod_price_base>
+<prod_price_net_base>34.96</prod_price_net_base>
+<prod_price_net>34.96</prod_price_net>
+<cat_path><![CDATA[KUCHNIA &amp; JADALNIA/Do serwowania/Akcesoria do przekąsek]]></cat_path>
+<prod_img>
+    <img>
+        http://wetro.pl/images/wetrosklep/7000-8000/Lyzka-z-nadrukiem-do-serwowania-Tapas-Ladelle-niebieska-LD-61328_[7897]_1200.jpg
+    </img>
+    <img>
+        http://wetro.pl/images/wetrosklep/8000-9000/Lyzka-z-nadrukiem-do-serwowania-Tapas-Ladelle-niebieska-LD-61328_[8976]_1200.jpg
+    </img>
+    <img>
+        http://wetro.pl/images/wetrosklep/8000-9000/Lyzka-z-nadrukiem-do-serwowania-Tapas-Ladelle-niebieska-LD-61328_[8977]_1200.jpg
+    </img>
+    <img>
+        http://wetro.pl/images/wetrosklep/8000-9000/Lyzka-z-nadrukiem-do-serwowania-Tapas-Ladelle-niebieska-LD-61328_[8978]_1200.jpg
+    </img>
+    <img>
+        http://wetro.pl/images/wetrosklep/8000-9000/Lyzka-z-nadrukiem-do-serwowania-Tapas-Ladelle-niebieska-LD-61328_[8979]_1200.jpg
+    </img>
+</prod_img>
+</item>
 </products>

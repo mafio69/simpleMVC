@@ -1,4 +1,5 @@
 <?php
+/** @noinspection PhpIncludeInspection */
 require getenv('path') . "/app/Web/Routes/routes.php";
 
 use App\Config\ReedOnEnv;
@@ -45,7 +46,7 @@ switch ($routeInfo[0]) {
             } else {
                 echo "Sorry, app fail";
             }
-            fileLog(date("Y-m-d H:i:m")." ". $e->getMessage());
+            fileLog("ROUTE: " . date("Y-m-d H:i:m") . " ". $e->getMessage() . ' ' . $e->getTraceAsString());
         }
         break;
 }

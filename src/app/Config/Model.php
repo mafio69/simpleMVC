@@ -37,7 +37,7 @@ class Model
     public function prepareException(Exception $e, string $method, string $sql, string $title): void
     {
         /** @var Logger $logger */
-        $this->logger->critical("{$title} | {$method} | {$sql}: {$e -> getMessage()}");
+        $this->logger->critical("{$title} | {$method} | {$sql} | : {$e -> getMessage()}");
         if (getenv('APP_ENV') === 'dev') {
             echo $e->getMessage();
         }

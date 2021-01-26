@@ -1,7 +1,5 @@
 <?php
-
 namespace App\Config;
-
 
 use InvalidArgumentException;
 use RuntimeException;

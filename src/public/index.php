@@ -1,4 +1,4 @@
-<?php
+<?php /** @noinspection PhpIncludeInspection */
 
 include '../vendor/autoload.php';
 $path= dirname(__DIR__);

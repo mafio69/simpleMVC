@@ -1,7 +1,5 @@
 <?php
-
 namespace App\Command;
-
 
 use Symfony\Component\Console\Command\Command;
 use Symfony\Component\Console\Input\InputInterface;
@@ -12,7 +10,7 @@ class CreateTableProducts extends Command
     /**
      * @var string
      */
-    protected static  $defaultName = 'app:getTable';
+    protected static  $defaultName = 'app:createTable';
 
     protected function config()
     {
@@ -23,7 +21,7 @@ class CreateTableProducts extends Command
 
     protected function execute(InputInterface $input, OutputInterface $output): int
     {
-        $migrateProducts = (new Migrate\generateProducts())->makeProducts();
+        $migrateProducts = (new Migrate\createTableProducts())->makeProducts();
 
         if ($migrateProducts) {
             echo "SUCCESS";

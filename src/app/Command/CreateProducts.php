@@ -5,26 +5,26 @@ use Symfony\Component\Console\Command\Command;
 use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Output\OutputInterface;
 
-class FillTableProducts extends Command
+class CreateProducts extends Command
 {
-
     /**
      * @var string
      */
-    protected static $defaultName = 'app:fillTable';
+    protected static  $defaultName = 'app:createProducts';
 
     protected function config()
     {
         $this
             ->setDescription('Make migrations')
-            ->setHelp('This command allows you to create migrate...');
+            ->setHelp('This command allows you to creates migrations from the xml file ');
     }
 
     protected function execute(InputInterface $input, OutputInterface $output): int
     {
+        $makeProducts = (new Migrate\createTableProducts())->makeProducts();
         $migrateProducts = (new Migrate\fillProducts())->fillProducts();
 
-        if ($migrateProducts) {
+        if ($migrateProducts && $makeProducts) {
             echo "SUCCESS";
             return Command::SUCCESS;
         } else {

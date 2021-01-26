@@ -10,6 +10,7 @@ $dispatcher = simpleDispatcher(function (RouteCollector $r) {
     $r->get('/{id:\d+}', [IndexController::class, 'index']);
     $r->get('/get-xml', [IndexController::class, 'getXml']);
     $r->get('/xml-sql', [IndexController::class, 'xmlToSql']);
+    $r->get('/test', [IndexController::class, 'test']);
 },[
     'cacheFile' => getenv('path'). '/route.cache', /* required */
 ]);

@@ -1,6 +1,8 @@
 #!/usr/bin/env php
-<?php
+/** @noinspection ALL */<?php
 // application.php
+$path= dirname(__DIR__);
+putenv("path=$path");
 require getenv('path').'/vendor/autoload.php';
 
 use App\Config\ReedOnEnv;
@@ -13,4 +15,18 @@ $application = new Application();
 // ... register commands
 $application->add(new App\Command\CreateTableProducts());
 $application->add(new App\Command\FillTableProducts());
-$application->run();
+$application->add(new App\Command\CreateProducts());
+if (isset($application)) {
+    try {
+        $application->run();
+    } catch (Exception $e) {
+
+        if (getenv('APP_ENV') === 'dev') {
+            echo $e->getMessage();
+        } else {
+            echo "Sorry, app fail";
+        }
+
+        fileLog(" COMMAND: ".date("Y-m-d H:i:m"). $e->getMessage());
+    }
+}
