@@ -10,7 +10,7 @@ class CreateTableProducts extends Command
     /**
      * @var string
      */
-    protected static  $defaultName = 'app:createTable';
+    protected static  $defaultName = 'app:createTableProducts';
 
     protected function config()
     {

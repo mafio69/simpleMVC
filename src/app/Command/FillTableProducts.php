@@ -11,7 +11,7 @@ class FillTableProducts extends Command
     /**
      * @var string
      */
-    protected static $defaultName = 'app:fillTable';
+    protected static $defaultName = 'app:fillTableProducts';
 
     protected function config()
     {
